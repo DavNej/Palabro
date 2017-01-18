@@ -3,26 +3,35 @@ body{
     height: 100vh;
 }
 #welcome-message{
+    position: absolute;
     padding: 20px;
     display: inline-block;
-    width: 80%;
+    width: 60%;
     /*height: 40%;*/
     background-color: #2e4057;
     color: white;
     font-family: sans-serif;
-    font-size: 5vw;
+    font-size: 3.5vw;
     font-weight: lighter;
 
     text-align: justify;
     line-height: 1.5em;
 
     margin-left: 50%;
-    margin-top: 30%;
+    margin-top: 15%;
     transform: translateX(-50%);
 }
 
 .individualWord {
-	font-size: 3em;
+	font-size: 2em;
+    line-height: 1.5em;
+}
+#background-words{
+    text-align: justify;
+}
+
+span.onhover{
+    margin: 0 5px;
 }
 
 .onhover:hover{
