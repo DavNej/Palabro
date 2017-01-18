@@ -2,16 +2,24 @@ body{
     background-color: #f6d8ae;
     height: 100vh;
 }
+
 .mascot-image{
     position: absolute;
     z-index: 2;
     height: 150px;
 }
-#welcome-message{
-    position: absolute;
-    padding: 20px;
-    display: inline-block;
+
+.bigDiv {
+	position: absolute;
     width: 60%;
+    margin-left: 50%;
+    margin-top: 15%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#welcome-message{
+    padding: 20px;
     background-color: #2e4057;
     color: white;
     font-family: sans-serif;
@@ -20,12 +28,6 @@ body{
 
     text-align: justify;
     line-height: 1.5em;
-
-    margin-left: 50%;
-    margin-top: 15%;
-    transform: translateX(-50%);
-
-    z-index: 2;
 }
 
 #background-words{
@@ -48,6 +50,10 @@ body{
 	cursor: pointer;
 	/*color: #83EEA7;*/
     opacity: 1;
+}
+.highlightedWords {
+	background-color: #C5DECD;
+	opacity: 1;
 }
 
 #word-list {
@@ -83,4 +89,14 @@ body{
   100% {
     transform: scale(1);
   }
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid #2e4057;
+    color: #2e4057 ;
+  	margin-left: 3%;
+  	line-height: 54px;
+    padding: 0 28px;
+    font-weight: 700;
 }
