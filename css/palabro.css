@@ -2,12 +2,16 @@ body{
     background-color: #f6d8ae;
     height: 100vh;
 }
+.mascot-image{
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+}
 #welcome-message{
     position: absolute;
     padding: 20px;
     display: inline-block;
     width: 60%;
-    /*height: 40%;*/
     background-color: #2e4057;
     color: white;
     font-family: sans-serif;
@@ -20,8 +24,18 @@ body{
     margin-left: 50%;
     margin-top: 15%;
     transform: translateX(-50%);
+
+    z-index: 2;
 }
 
+#background-words{
+	display: inline-block;
+	width: 90%;
+	height: 100%;
+	font-family: sans-serif;
+    text-align: justify;
+    z-index: 1;
+}
 .individualWord {
 	font-size: 2em;
     line-height: 1.5em;
@@ -30,13 +44,10 @@ body{
     opacity: 0.5;
 }
 
-#background-words{
-    text-align: justify;
-}
-
-.onhover:hover{
+.individualWord:hover{
 	cursor: pointer;
-	color: #83EEA7;
+	/*color: #83EEA7;*/
+    opacity: 1;
 }
 
 #word-list {
@@ -50,13 +61,7 @@ body{
 	display: inline-block;
 	text-align: center;
 }
-#background-words{
-		display: inline-block;
-		width: 90%;
-		height: 100%;
-		    font-family: sans-serif;
 
-}
 .individualLine {
 	display: block;
 	margin: auto;
@@ -65,7 +70,6 @@ body{
 .animate{
       animation: bounceIn 2s;
 }
-
 
 @keyframes bounceIn {
   0% {

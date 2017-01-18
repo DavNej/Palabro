@@ -53,6 +53,7 @@ Palabro.createWords= function () {
 Palabro.clickedOnWord= function() {
 	var chosenWord= $(this).html();
 	var allWords = $('#word-list span');
+	$('#word-list').slideDown();
 	for (var i = 0; i < allWords.length; i++) {
 		if (allWords.eq(i).text() == chosenWord) {
 			return;
@@ -63,10 +64,14 @@ Palabro.clickedOnWord= function() {
 	$(chosenWordinSpan).addClass("individualLine");
 	$(chosenWordinSpan).addClass("animate");
 	$('#word-list').append(chosenWordinSpan);
+	
+	setTimeout(function(){
+		$('#word-list').slideUp();
+	},2000)
 
 };
 
 Palabro.beginGame = function() {
     Palabro.createWords();
-    // Palabro.createWordList();
+	$('#word-list').hide();
 };
