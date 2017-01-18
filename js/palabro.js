@@ -35,6 +35,8 @@ Palabro.backgroundWords= ["Zionism ","is ","the ","national ","movement ","of ",
 Palabro.createWords= function () {
 	for (var i= 0; i< Palabro.backgroundWords.length; i++) {
 	    var wordWithSpan= $("<span>").text(Palabro.backgroundWords[i]);
+	    // $.trim(wordWithSpan);
+
 	    wordWithSpan.addClass("individualWord");
 	    wordWithSpan.addClass("onhover");
 	    $('#background-words').append(wordWithSpan);
@@ -56,6 +58,14 @@ Palabro.clickedOnWord= function() {
 	for (var i = 0; i < allWords.length; i++) {
 		if (allWords.eq(i).text() == chosenWord) {
 			return;
+		}
+	}
+
+	
+	for (var i = 0; i < $('#background-words .individualWord').length; i++) {
+		if ($('#background-words .individualWord').eq(i).text() == chosenWord) {
+			$('#background-words .individualWord').eq(i).addClass("highlightedWords")
+
 		}
 	}
 

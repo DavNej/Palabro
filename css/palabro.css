@@ -2,11 +2,16 @@ body{
     background-color: #f6d8ae;
     height: 100vh;
 }
-#welcome-message{
-    position: absolute;
-    padding: 20px;
-    display: inline-block;
+
+.bigDiv {
+	position: absolute;
     width: 60%;
+    margin-left: 50%;
+    margin-top: 15%;
+    transform: translateX(-50%);
+}
+#welcome-message{
+    padding: 20px;
     /*height: 40%;*/
     background-color: #2e4057;
     color: white;
@@ -17,9 +22,6 @@ body{
     text-align: justify;
     line-height: 1.5em;
 
-    margin-left: 50%;
-    margin-top: 15%;
-    transform: translateX(-50%);
 }
 
 .individualWord {
@@ -37,6 +39,10 @@ body{
 .onhover:hover{
 	cursor: pointer;
 	color: #83EEA7;
+}
+.highlightedWords {
+	background-color: #C5DECD;
+	opacity: 1;
 }
 
 #word-list {
@@ -79,4 +85,14 @@ body{
   100% {
     transform: scale(1);
   }
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid #2e4057;
+    color: #2e4057 ;
+  	margin-left: 3%;
+  	line-height: 54px;
+    padding: 0 28px;
+    font-weight: 700;
 }
