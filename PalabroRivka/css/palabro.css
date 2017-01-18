@@ -1,0 +1,21 @@
+.individualWord {
+	font-size: 3em;
+/*	z-index: 0;
+*/}
+
+.onhover:hover{
+	cursor: pointer;
+	background-color: yellow;
+	font-size: 3.5em;
+}
+/*
+button {
+	z-index: 1;
+}
+
+.mascot {
+	z-index: 1;
+}
+*/
+/*
+text-align: justify;*/
