@@ -26,8 +26,15 @@ body{
     font-size: 3.5vw;
     font-weight: lighter;
 
-    text-align: justify;
+    text-align: center;
     line-height: 1.5em;
+
+    box-shadow: 5px 5px 5px black;
+}
+
+#palName{
+    font-size: 2.5em;
+    line-height: 0.9em;
 }
 
 #background-words{
@@ -48,7 +55,6 @@ body{
 
 .individualWord:hover{
 	cursor: pointer;
-	/*color: #83EEA7;*/
     opacity: 1;
 }
 .highlightedWords {

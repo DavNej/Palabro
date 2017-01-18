@@ -18,10 +18,10 @@ Palabro.foreignName = [
 //    "پالابرو",
     "पलब्रो"];
 
-Palabro.foreignNameString = "<strong>Palabro</strong>";
+Palabro.foreignNameString = "<strong id=\"palName\">Palabro</strong><br/>";
 
 Palabro.foreignName.forEach(function(element) {
-    Palabro.foreignNameString += " | &nbsp; <strong>" + element + "</strong>";
+    Palabro.foreignNameString += " |&nbsp; <strong>" + element + "</strong>";
 });
 
 $('#welcome-message').html(Palabro.foreignNameString);
