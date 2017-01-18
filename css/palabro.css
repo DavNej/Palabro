@@ -6,7 +6,7 @@ body{
 .mascot-image{
     position: absolute;
     z-index: 2;
-    height: 150px;
+    height: 50px;
 }
 
 .bigDiv {
@@ -98,11 +98,15 @@ body{
 }
 
 .button {
-    background-color: transparent;
+    background-color: #f6d8ae;
     border: 2px solid #2e4057;
-    color: #2e4057 ;
+    color: #2e4057;
   	margin-left: 3%;
   	line-height: 54px;
     padding: 0 28px;
     font-weight: 700;
+}
+
+.user {
+	margin-left: -28px;
 }
