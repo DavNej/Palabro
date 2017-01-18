@@ -20,3 +20,13 @@ body{
     margin-top: 30%;
     transform: translateX(-50%);
 }
+
+.individualWord {
+	font-size: 3em;
+}
+
+.onhover:hover{
+	cursor: pointer;
+	background-color: yellow;
+	font-size: 3.5em;
+}
