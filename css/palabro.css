@@ -25,17 +25,58 @@ body{
 .individualWord {
 	font-size: 2em;
     line-height: 1.5em;
+    margin: 0 5px;
+	color: white;
+    opacity: 0.5;
 }
+
 #background-words{
     text-align: justify;
 }
 
-span.onhover{
-    margin: 0 5px;
-}
-
 .onhover:hover{
 	cursor: pointer;
-	background-color: yellow;
-	font-size: 3.5em;
+	color: #83EEA7;
+}
+
+#word-list {
+	border: 1px solid black;
+		color: #2e4057;
+    font-family: sans-serif;
+
+	height: 500px;
+	width: 9%;
+	float: right;
+	display: inline-block;
+	text-align: center;
+}
+#background-words{
+		display: inline-block;
+		width: 90%;
+		height: 100%;
+		    font-family: sans-serif;
+
+}
+.individualLine {
+	display: block;
+	margin: auto;
+}
+
+.animate{
+      animation: bounceIn 2s;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
