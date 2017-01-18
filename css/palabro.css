@@ -1,3 +1,22 @@
 body{
-    background-color: blue;
+    background-color: #f6d8ae;
+    height: 100vh;
+}
+#welcome-message{
+    padding: 20px;
+    display: inline-block;
+    width: 80%;
+    /*height: 40%;*/
+    background-color: #2e4057;
+    color: white;
+    font-family: sans-serif;
+    font-size: 5vw;
+    font-weight: lighter;
+
+    text-align: justify;
+    line-height: 1.5em;
+
+    margin-left: 50%;
+    margin-top: 30%;
+    transform: translateX(-50%);
 }
