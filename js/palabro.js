@@ -41,11 +41,32 @@ Palabro.createWords= function () {
 	wordWithSpan.on('click', Palabro.clickedOnWord);
 	}
 };
+ // Palabro.createWordList= function(){
+ // 	for (var i= 0; i< Palabro.backgroundWords.length; i++) {
+ // 		var wordInList= $("<span>").text(Palabro.backgroundWords[i]);
+ // 		wordInList.addClass("individualLine");
+
+	// $('.word-list').append(wordInList);
+	// }
+ // };
 
 Palabro.clickedOnWord= function() {
-	alert("yo");
-}
+	var chosenWord= $(this).html();
+	var allWords = $('#word-list span');
+	for (var i = 0; i < allWords.length; i++) {
+		if (allWords.eq(i).text() == chosenWord) {
+			return;
+		}
+	}
+
+	var chosenWordinSpan= $("<span>").text(chosenWord);
+	$(chosenWordinSpan).addClass("individualLine");
+	$(chosenWordinSpan).addClass("animate");
+	$('#word-list').append(chosenWordinSpan);
+
+};
 
 Palabro.beginGame = function() {
     Palabro.createWords();
+    // Palabro.createWordList();
 };
