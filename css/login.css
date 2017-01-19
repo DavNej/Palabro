@@ -18,6 +18,10 @@ body{
     position: fixed;
 }
 
+.mediaBox{
+    background-color: floralwhite;
+}
+
 #user-pic{
     margin-top: 20px;
     width: 60%;
@@ -171,30 +175,38 @@ body{
 /*************MULTIMEDIA***************/
 
 .titleBar{
-    border:1px solid black;
+    /*border:2px solid black;*/
     width:80%;
 
+}
+
+.media{
+    margin-bottom:10px;
 }
 
 .multimediaMainContainer{
     margin-left: 20px;
 }
+
+#mmHeader{
+    font-family:'Lato';
+    margin-left:2%;
+}
 .mediaTitle{
-    border:1px solid blue;
     display:inline-block;
     font-size: 2em;
+    font-family:'Lato';
 }
 
 .relatedWords{
-    border:1px solid red;
     display:inline-block;
     float:right;
+    font-family:'Lato';
 }
 
 .mediaContent{
     height:300px;
     width:80%;
-    border:2px solid darkorange;
 }
 
 #logo{
