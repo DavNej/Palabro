@@ -72,14 +72,17 @@ body{
 }
 
 #elephant{
+    position:absolute;
     margin-top:5px;
     height:400px;
     width:400px;
     display:inline-block;
+    right:0;
 }
 
 #elephantImg{
     height:100px;
+    right:0;
 }
 
 #elephantImg.centerImg{

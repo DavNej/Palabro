@@ -1,8 +1,8 @@
 /**
  * Created by itc_user1 on 1/18/2017.
  */
-var words = ["cup","donkey","efficient","hackathon","booty","kendama","hummus"]
-var defs = ["A vessel for liquids","A horse like animal","Doing things quicker with more mistakes","A waste of time which makes one contemplate the meaning of life","a pirates treasure","Israeli game with a ball and a stick","israeli gasoline"];
+var words = ["cup","donkey","efficient","chicken","booty","kendama","hummus"]
+var defs = ["A vessel for liquids","A horse like animal","Doing things quicker with more mistakes","a flightless bird","a pirates treasure","Israeli game with a ball and a stick","israeli gasoline"];
 
 function checkMatch(word1,word2){
     word1 = $(word1);
