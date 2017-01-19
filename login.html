@@ -17,8 +17,10 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 
 </head>
-<body onload="Palabro.beginGame();">
+<body>
 
+
+<img id="logo" src = "images/logo.png">
 <div class="nav-bar">
     <img id="user-pic" src="images/user.png" alt="">
     <h5 id="userInfos">Jordan Pal</h5>
@@ -29,10 +31,8 @@
     <div id="multi" class="section">Multimedia</div>
     <div class="section">Settings</div>
 </div>
-
 <div id="content">
 </div>
-
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 <script src="./js/palabro.js"></script>
@@ -49,8 +49,8 @@
             var that = this;
             $("#multi").click(that.switchToWords);
             $("#mywords").click(that.switchToMulti);
-        },
 
+        },
 
         switchToMulti: function () {
 
@@ -77,16 +77,34 @@
     });
 
     var MyWords = React.createClass({
+        getInitialState: function () {
+            return {
+                timeadded: "2 Minutes Ago",
+                wordClicked: false
+            }
+        },
+        addPopup: function(){
+           this.setState({timeadded: "3 Minutes Ago"});
+            this.setState({wordClicked:true})
+            $(".badge").html("1");
+
+        },
 
         render: function () {
             return (
                     <div>
                         <div className="mainWordsContainer">
                             <h3 className="lesserHeader">Recently Added</h3>
-                            <Word added="Just now" entry="HTML" definition="What is put in, taken in, or operated on by any process or system."/>
-                            <Word added="Just now" entry="Input" definition="Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages."/>
-                            <Word added="Just now" entry="Field" definition="An area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences."/>
-                            <Word added="Just now" entry="Behavior" definition="The way in which one acts or conducts oneself, especially toward others."/>
+                            {this.state.wordClicked ? <Word added="Just now" entry="standardize"
+                                                            definition="Cause (something) to conform to a standard."/> : null}
+                            <div onDoubleClick={this.addPopup}><Word  added={this.state.timeadded} entry="HTML"
+                                  definition="Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages."/></div>
+                            <Word added={this.state.timeadded} entry="Input"
+                                  definition="What is put in, taken in, or operated on by any process or system."/>
+                            <Word added={this.state.timeadded} entry="Field"
+                                  definition="An area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences."/>
+                            <Word added={this.state.timeadded} entry="Behavior"
+                                  definition="The way in which one acts or conducts oneself, especially toward others."/>
                         </div>
                         <div className="olderWords">
                             <h3 className="lesserHeader">Your Words</h3>
@@ -101,10 +119,12 @@
         }
     });
 
+
+
     var Word = React.createClass({
         render: function () {
             return (
-                    <div className="wordContainer">
+                    <div className="wordContainer" id={this.props.entry}>
                         <div className="word wordItem">
                             <div>{this.props.entry}</div>
                         </div>
@@ -122,11 +142,9 @@
     var Header = React.createClass({
         render: function () {
             return (
-
                     <div className="mainHeaderContainer">
                         <h2 className="mainHeader">Jordan's {this.props.section}</h2>
                     </div>
-
             )
         }
     });
@@ -145,14 +163,15 @@
         }
     });
 
-
     var MediaBoxPolitics = React.createClass({
-        render: function(){
-            return(
+        render: function () {
+            return (
                     <div>
                         <div className="titleBar">
                             <div className="mediaTitle">Politics</div>
-                            <div className="relatedWords"><span>administration legislate liberalism</span></div>
+                            <div className="relatedWords">
+                                <span>administration legislate liberalism</span>
+                            </div>
                         </div>
                         <div className="mediaContent">
                             <div className="videos"></div>
@@ -164,8 +183,8 @@
     });
 
     var MediaBoxTechnology = React.createClass({
-        render: function(){
-            return(
+        render: function () {
+            return (
                     <div>
                         <div className="titleBar">
                             <div className="mediaTitle">High-Tech</div>

@@ -2,7 +2,8 @@ var words = [
     {word: "input", definition: "What is put in, taken in, or operated on by any process or system.", supplement:[{pronunciation:"in.poot"}, {translation:"קלט"}]},
     {word: "field", definition: "An area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences.", supplement:[{pronunciation:"fēld"}, {translation:"שדה"}]},
     {word: "behavior", definition:"The way in which one acts or conducts oneself, especially toward others.",supplement:[{pronunciation:"biˈhāvyər"}, {translation:"הִתְנַהֲגוּת"}]},
-    {word: "HTML", definition:"Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.",supplement:[{pronunciation:""}, {translation:""}]}
+    {word: "HTML", definition:"Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.",supplement:[{pronunciation:""}, {translation:""}]},
+    {word: "standardized", definition: "What is put in, taken in, or operated on by any process or system.", supplement:[{pronunciation:"in.poot"}, {translation:"קלט"}]},
 ];
 
 
