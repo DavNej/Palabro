@@ -1,0 +1,14 @@
+{
+  "name": "Selected Text",
+  "version": "0.1",
+  "description": "Selected Text",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Selected Text",
+    "default_icon": "palabro.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
