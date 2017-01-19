@@ -7,7 +7,7 @@ body{
 .nav-bar{
     display: inline-block;
     width: 19%;
-    background-color: #e2d8d3;
+    background-color: #C1C1C1;
     height: 100%;
     text-align: center;
     position: fixed;
@@ -15,9 +15,20 @@ body{
 
 #user-pic{
     margin-top: 20px;
-    width: 80%;
+    width: 60%;
     box-shadow: 3px 3px 7px 3px rgba(0,0,0,0.75);
     border-radius: 10px;
+}
+
+#userInfos{
+    font-family: Lato;
+    font-size: 2em;
+    margin: 10px 0 0 0;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    font-family: Lato;
 }
 
 .top{
@@ -25,7 +36,7 @@ body{
     /*border-top: 1px solid #323335;*/
 }
 .badge{
-    background-color: orangered;
+    background-color: #FE654F;
     color:white;
     width:20px;
     text-align: center;
@@ -45,7 +56,7 @@ body{
 }
 
 .section:hover{
-    background-color: #bbbec1;
+    background-color: #474747;
     color: white;
 }
 #content{
@@ -62,7 +73,7 @@ body{
 .mainHeader{
     font-family: Lato;
     position:relative;
-    left:50px;
+    left:30px;
     width:40%;
     border-bottom: 3px solid darkslategrey;
 }
@@ -81,15 +92,15 @@ body{
 .mainWordsContainer{
     background-color: white;
     width:95%;
-    padding:10px;
-    margin-left: 10px;
+    padding:10px 0 30px 0;
+    margin-left: 20px;
     border-radius: 10px;
 }
 
 .olderWords{
     width:95%;
-    padding:10px;
-    margin-left: 10px;
+    padding:10px 0 30px 0;
+    margin-left: 20px;
     border-radius: 10px;
     background-color: papayawhip;
     margin-top:15px;
@@ -143,7 +154,7 @@ body{
     float: right;
     border-bottom: 2px solid deepskyblue;
     bottom: 0;
-    color:orangered;
+    color:#FE654F;
 
 }
 
