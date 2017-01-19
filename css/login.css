@@ -4,6 +4,11 @@ body{
     margin:0;
     background-color: #f6d8ae;
 }
+
+#gamelink{
+    text-decoration:none;
+    color:black;
+}
 .nav-bar{
     display: inline-block;
     width: 19%;

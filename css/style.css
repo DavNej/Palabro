@@ -1,0 +1,113 @@
+body{
+    background-color:#f6daae;
+    margin:0px;
+    padding:0px;
+}
+
+#nav{
+    height:100px;
+    background-color: #51c1b6;
+
+}
+
+
+.wordText{
+    text-align:center;
+    margin-top:10px;
+    font-family: 'Lato';
+}
+
+.defText{
+    font-family: 'Lato';
+}
+
+.def.winner{
+    background-color:springgreen;
+}
+
+.gword.winner{
+    background-color:springgreen;
+}
+.def.dSelected{
+    background-color:lightgray;
+}
+
+.gword{
+    padding:5px;
+    margin:10px;
+    width:150px;
+    height:50px;
+    font-family: 'Lato';
+    border-radius:10px;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    background-color:ghostwhite;
+    cursor:pointer;
+}
+
+.def{
+    padding:2px;
+    margin:10px;
+    width:260px;
+    height:55px;
+    border-radius:10px;
+    font-family: 'Lato';
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    background-color:ghostwhite;
+    cursor:pointer;
+
+}
+
+#wordList{
+    margin-left:20%;
+    height:400px;
+    width:200px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.gword.selected{
+    background-color:lightgray;
+}
+
+.gword.wrong{
+    background-color:red;
+}
+.def.wrong{
+    background-color:red;
+}
+
+#defList{
+    height:400px;
+    width:400px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+#result{
+    display:inline-block;
+    width:300px;
+    height:500px;
+}
+
+#elephant{
+    margin-top:5px;
+    height:400px;
+    width:400px;
+    display:inline-block;
+}
+
+#elephantImg{
+    height:200px;
+}
+
+#elephantImg.centerImg{
+    position:absolute;
+    left:30%;
+    top:15%;
+    height:500px;
+}
+
