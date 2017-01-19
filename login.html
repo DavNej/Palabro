@@ -1,34 +1,144 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta lang="en">
-        <title>Register</title>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <title>Register</title>
 
-        <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/logo.png">
 
-        <link rel="stylesheet" href="./css/palabro.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-
-    </head>
-    <body onload= "Palabro.beginGame();">
-
-        <div class="nav-bar">
-            <img id="user-pic" src="images/user.png" alt="">
-            <div class="section top">My words</div>
-            <div class="section">My games</div>
-            <div class="section">My stats</div>
-            <div class="section">Multimedia</div>
-            <div class="section">Settings</div>
-        </div>
-        <div class="content">
-            
-        </div>
-
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://fb.me/react-0.14.0.js"></script>
+    <script src="https://fb.me/react-dom-0.14.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <script src="./js/palabro.js"></script>
-    </body>
+
+</head>
+<body onload="Palabro.beginGame();">
+
+<div class="nav-bar">
+    <img id="user-pic" src="images/user.png" alt="">
+    <div id="mywords" class="section top">My words<span class="badge">4</span></div>
+    <div class="section">My games</div>
+    <div class="section">My stats</div>
+    <div id="multi" class="section">Multimedia</div>
+    <div class="section">Settings</div>
+</div>
+<div id="content">
+</div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+<script src="./js/palabro.js"></script>
+<script type="text/babel">
+
+    var Main = React.createClass({
+        getInitialState: function () {
+            return {
+                mywords: true,
+                section: "Word List"
+            }
+        },
+        componentDidMount: function () {
+            var that = this;
+            $("#multi").click(that.switchToWords);
+            $("#mywords").click(that.switchToMulti);
+
+        },
+
+        switchToMulti: function () {
+
+            this.setState({
+                mywords: true,
+                section: "Word List"
+            })
+        }
+        ,
+
+        switchToWords: function () {
+            this.setState({
+                mywords: false,
+                section: "Media Suggestions"
+            })
+        },
+
+        render: function () {
+            return (<div>
+                        <Header section={this.state.section}/>
+                        {this.state.mywords ? <MyWords /> : <Multimedia />}
+                    </div>
+            )
+        }
+    });
+
+    var MyWords = React.createClass({
+        render: function () {
+            return (
+                    <div>
+                        <div className="mainWordsContainer">
+                            <h3 className="lesserHeader">Recently Added</h3>
+                            <Word added="Just now" entry="HTML"/>
+                            <Word added="Just now" entry="Input"/>
+                            <Word added="Just now" entry="Field"/>
+                            <Word added="Just now" entry="Behavior"/>
+                        </div>
+                        <div className="olderWords">
+                            <h3 className="lesserHeader">Your Words</h3>
+                            <Word added="4 Hours Ago" entry="Integrity"/>
+                            <Word added="4 Hours Ago" entry="Administration"/>
+                            <Word added="1 Day Ago" entry="Delegate"/>
+                            <Word added="1 Day Ago" entry="Element"/>
+                            <Word added="1 Day Ago" entry="Augment"/>
+                        </div>
+                    </div>
+            )
+        }
+    });
+
+    var Word = React.createClass({
+        render: function () {
+            return (
+                    <div className="wordContainer">
+                        <div className="word wordItem">
+                            <div>{this.props.entry}</div>
+                        </div>
+                        <div className="definition wordItem">
+                            <div>this is the definition</div>
+                        </div>
+                        <div className="timeAdded wordItem">
+                            <div>{this.props.added}</div>
+                        </div>
+                    </div>
+            )
+        }
+    });
+
+    var Header = React.createClass({
+        render: function () {
+            return (
+
+                    <div className="mainHeaderContainer">
+                        <h2 className="mainHeader">Jordan's {this.props.section}</h2>
+                    </div>
+
+            )
+        }
+    });
+
+    var Multimedia = React.createClass({
+        render: function () {
+            return (
+                    <div>Poopy</div>
+            )
+        }
+    });
+
+    ReactDOM.render(
+            <Main />,
+            document.getElementById('content')
+    );
+</script>
+</body>
 </html>

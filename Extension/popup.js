@@ -58,3 +58,7 @@ Palabro.highlightSameWord = function (word) {
 
 
 Palabro.activatePalabro();
+
+$(".accountLink").click(function(){
+    chrome.tabs.create({url: $(this).attr('href')})
+});
