@@ -150,3 +150,32 @@ body{
 .olderWords .timeAdded{
     color: darkgoldenrod;
 }
+
+/*************MULTIMEDIA***************/
+
+.titleBar{
+    border:1px solid black;
+    width:80%;
+
+}
+
+.multimediaMainContainer{
+    margin-left: 20px;
+}
+.mediaTitle{
+    border:1px solid blue;
+    display:inline-block;
+    font-size: 2em;
+}
+
+.relatedWords{
+    border:1px solid red;
+    display:inline-block;
+    float:right;
+}
+
+.mediaContent{
+    height:300px;
+    width:80%;
+    border:2px solid darkorange;
+}
