@@ -76,15 +76,16 @@
     });
 
     var MyWords = React.createClass({
+
         render: function () {
             return (
                     <div>
                         <div className="mainWordsContainer">
                             <h3 className="lesserHeader">Recently Added</h3>
-                            <Word added="Just now" entry="HTML"/>
-                            <Word added="Just now" entry="Input"/>
-                            <Word added="Just now" entry="Field"/>
-                            <Word added="Just now" entry="Behavior"/>
+                            <Word added="Just now" entry="HTML" definition="What is put in, taken in, or operated on by any process or system."/>
+                            <Word added="Just now" entry="Input" definition="Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages."/>
+                            <Word added="Just now" entry="Field" definition="An area of open land, especially one planted with crops or pasture, typically bounded by hedges or fences."/>
+                            <Word added="Just now" entry="Behavior" definition="The way in which one acts or conducts oneself, especially toward others."/>
                         </div>
                         <div className="olderWords">
                             <h3 className="lesserHeader">Your Words</h3>
@@ -107,7 +108,7 @@
                             <div>{this.props.entry}</div>
                         </div>
                         <div className="definition wordItem">
-                            <div>this is the definition</div>
+                            <div>{this.props.definition}</div>
                         </div>
                         <div className="timeAdded wordItem">
                             <div>{this.props.added}</div>
@@ -132,7 +133,47 @@
     var Multimedia = React.createClass({
         render: function () {
             return (
-                    <div>Poopy</div>
+                    <div>
+                        <h2>Based on Your Look-ups</h2>
+                        <div className="multimediaMainContainer">
+                            <MediaBoxPolitics/>
+                            <MediaBoxTechnology/>
+                        </div>
+                    </div>
+            )
+        }
+    });
+
+    var MediaBoxPolitics = React.createClass({
+        render: function(){
+            return(
+                    <div>
+                        <div className="titleBar">
+                            <div className="mediaTitle">Politics</div>
+                            <div className="relatedWords"><span>administration legislate liberalism</span></div>
+                        </div>
+                        <div className="mediaContent">
+                            <div className="videos"></div>
+                            <div className="pagelinks"></div>
+                        </div>
+                    </div>
+            )
+        }
+    });
+
+    var MediaBoxTechnology = React.createClass({
+        render: function(){
+            return(
+                    <div>
+                        <div className="titleBar">
+                            <div className="mediaTitle">High-Tech</div>
+                            <div className="relatedWords">hacking upload data</div>
+                        </div>
+                        <div className="mediaContent">
+                            <div className="videos"></div>
+                            <div className="pagelinks"></div>
+                        </div>
+                    </div>
             )
         }
     });
