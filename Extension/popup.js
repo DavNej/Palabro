@@ -63,3 +63,5 @@ Palabro.activatePalabro();
 $(".accountLink").click(function(){
     chrome.tabs.create({url: $(this).attr('href')})
 });
+
+$()
